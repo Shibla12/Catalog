@@ -1,11 +1,14 @@
-console.log("Starting server...");
-console.log("Node version:", process.version);
+const jsonServer = require("json-server");
 
-try {
-  const jsonServer = require("json-server");
-  console.log("json-server loaded successfully!");
-} catch (error) {
-  console.error("FAILED TO LOAD JSON SERVER:");
-  console.error(error);
-  process.exit(1);
-}
+const server = jsonServer.create();
+const router = jsonServer.router("db.json");
+const middlewares = jsonServer.defaults();
+
+server.use(middlewares);
+server.use(router);
+
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`JSON Server running on port ${PORT}`);
+});
