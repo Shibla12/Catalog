@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "name": "Mobile",
+      "price": 25000,
+      "category": "Electronics",
+      "id": "0UVCRrh_BX0"
+    },
+    {
+      "name": "Laptop",
+      "price": 54000,
+      "category": "Electronics",
+      "id": "HFxV6KUe09g"
+    },
+    {
+      "name": "Samsung Mobile",
+      "price": 30000,
+      "category": "Electronics",
+      "id": "QfGq1GiFK4E"
+    },
+    {
+      "name": "Backpack",
+      "price": 1200,
+      "category": "Accessories",
+      "id": "7EjB-b4MoLM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
